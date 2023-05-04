@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace Domain.Entity
+namespace Infrastructure
 {
     public class DataContext : DbContext
     {
@@ -20,7 +13,6 @@ namespace Domain.Entity
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("DefaultConnection");
         }
 
         public DbSet<Product> Products { get; set; }

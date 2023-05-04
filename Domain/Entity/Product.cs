@@ -6,9 +6,9 @@ namespace Domain.Entity
     {
         public string ProductID { get; set; }
         public string Name { get; set; }
-        [Column(TypeName = "decimal(18,2")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Cost { get; set; }
-        [Column(TypeName = "decimal(18,2")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal UnitPrice { get; set; }
         public double Stock { get; set; } = 0.0;
         public string LastSellDate { get; set; } = "";
